@@ -26,7 +26,7 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
 
         ImageView ingredientsIv = findViewById(R.id.image_iv);
-        alsoKnownTv= findViewById(R.id.also_known_tv);
+        alsoKnownTv = findViewById(R.id.also_known_tv);
         originTv = findViewById(R.id.origin_tv);
         descriptionTv = findViewById(R.id.description_tv);
         ingredientsTv = findViewById(R.id.ingredients_tv);
@@ -66,12 +66,12 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     private void populateUI(Sandwich sandwich) {
-        for(String item:sandwich.getAlsoKnownAs()){
-            alsoKnownTv.append(item+" - ");
+        for (String item : sandwich.getAlsoKnownAs()) {
+            alsoKnownTv.append(item + " - ");
         }
         originTv.setText(sandwich.getPlaceOfOrigin());
         descriptionTv.setText(sandwich.getDescription());
-        for(String item:sandwich.getIngredients()){
+        for (String item : sandwich.getIngredients()) {
             ingredientsTv.append(item + " - ");
         }
     }
